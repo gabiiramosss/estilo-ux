@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
 
+/* CONFIGS GERAIS DA PÁGINA */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Quicksand', sans-serif;
     color: grey;
+    background-color: #EDECED;
 }
 
-.container-grid {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Cabeçalho */
+/* CONFIGURAÇÕES DO HEADER */
 header {
     background-color: grey;
 }
@@ -18,7 +21,6 @@ header {
 header .header-flex {
     display: flex;
     justify-content: space-between;
-
 }
 
 header h1 {
@@ -31,10 +33,7 @@ header h1 #logoux{
     font-style: italic;
 }
 
-section h2 {
-    
-}
-
+/* CONFIGURAÇÕES DA NAV */
 header nav {
     width: 200px;
     display: flex;
@@ -47,22 +46,56 @@ header nav a {
     text-decoration: none;
 }
 
-.column-flex  {
-    display: flex;
-    justify-content: space-between;
+/* CONFIGURAÇÕES GERAIS DA SECTION */
+.container-grid {
+    width: 100%; /*largura padrão, redundante */
+    margin: 0 auto; /*margens laterais automática - centralizam o elemento*/
+    max-width: 1200px; /*limite máximo de largura*/
+    min-width: 992px; /*limite mínimo de largura*/
 }
 
+/* CONFIGURAÇÕES DAS COLUNAS */
+main .column-flex  {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* section com a class "first-column" */
 main .first-column {
     width: 75%;
+    background-color: white;
 }
 
 main .first-column #banner-image {
     width: 100% ;
 }
 
-main .first-column p {
-    margin-top: 15px;
+main .first-column h2 {
+    margin:20px;
 }
+
+main .first-column p {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* aside com a class "second-column" */
 main .second-column {
     width: 20%;
+}
+
+main .second-column article {
+    background-color: white;
+}
+
+main .second-column .posts-article ul li {
+    list-style: inside;
+}
+/* FOOTER */
+footer {
+    padding: 20px 0;
+    color: white;
+    background-color: #676767;
 }
